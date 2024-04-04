@@ -1,0 +1,17 @@
+name: php-test-wahelp
+recipe: lemp
+config:
+  via: nginx
+  config:
+    vhosts: .lando/nginx.conf
+  php: '7.4'
+services:
+  phpmyadmin:
+    type: phpmyadmin
+  database:
+    type: mysql
+    creds:
+      user: mysql
+      password: mysql
+      database: test
+      port: 3306
